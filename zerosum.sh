@@ -4,7 +4,7 @@ read -p "Enter total number to be input:" n
 echo "Enter the integers: "
 read -a arr
 echo ${arr[@]}
-IFS=$'' sorted=($(sort <<<"${arr[*]}"))
+IFS=$'\n' sorted=($(sort <<<"${arr[*]}"))
 echo "${sorted[@]}"
 
 for (( i=0; i<=$(($n-2)); i++ ))
